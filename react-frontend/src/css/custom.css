@@ -1,0 +1,66 @@
+/* layout and structure */
+
+.fixed-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.absolute-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.relative-wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.side-bar--320 {
+  z-index: 1000;
+  width: 320px;
+  max-width: 320px;
+  min-width: 320px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .fixed-wrapper {
+    position: relative;
+    height: 100%;
+  }
+
+  .absolute-wrapper {
+    position: relative;
+  }
+
+  .side-bar--320 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .vertical-nav ul {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  body {
+    overflow-y: scroll !important;
+  }
+
+}
